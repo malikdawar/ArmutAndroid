@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layoutRecommendedMoviesControl"
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:background="@color/color_gray_light"
+            android:padding="@dimen/padding_16">
+
+            <TextView
+                android:id="@+id/tv_header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/padding_16"
+                android:layout_marginTop="@dimen/padding_16"
+                android:text="@string/hizmet_pis_agzima"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize28sp"
+                android:textStyle="bold"
+                tools:ignore="ObsoleteLayoutParam" />
+
+            <EditText
+                android:id="@+id/editMobileNo"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/tv_header_title"
+                android:layout_margin="@dimen/spacing_8"
+                android:background="@drawable/search_layout"
+                android:drawableStart="@drawable/ic_baseline_search"
+                android:drawableLeft="@drawable/ic_baseline_search"
+                android:drawablePadding="@dimen/spacing_8"
+                android:ems="10"
+                android:hint="@string/which_service_do_you_need"
+                android:importantForAutofill="no"
+                android:inputType="text" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_home_header" />
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_220"
+            android:layout_margin="@dimen/spacing_32"
+            app:cardBackgroundColor="@color/teal_700"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="@dimen/padding_8">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_discount_couple" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/size_85"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/spacing_16"
+                    android:background="@drawable/search_layout"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="-15%"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize22sp"
+                        android:textStyle="bold"
+                        tools:ignore="ObsoleteLayoutParam" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center_horizontal"
+                        android:text="INDIRIM"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        tools:ignore="ObsoleteLayoutParam" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/spacing_16"
+                android:layout_marginTop="152dp"
+                android:maxLength="35"
+                android:maxLines="1"
+                android:text="@string/newly_weds"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize12sp"
+                tools:ignore="ObsoleteLayoutParam" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/spacing_16"
+                android:layout_marginTop="175dp"
+                android:maxLength="135"
+                android:maxLines="2"
+                android:text="@string/loremIspm_text"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                tools:ignore="ObsoleteLayoutParam" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_16"
+            android:text="@string/label_all_services"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize16sp"
+            android:textStyle="bold"
+            tools:ignore="ObsoleteLayoutParam" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRecommendedMovies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_16"
+            android:layout_marginTop="@dimen/spacing_8"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            tools:itemCount="12"
+            tools:listitem="@layout/row_item_all_services" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_16"
+            android:layout_marginTop="@dimen/spacing_32"
+            android:layout_marginBottom="@dimen/spacing_16"
+            android:text="@string/label_popular_these_days"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize16sp"
+            android:textStyle="bold"
+            tools:ignore="ObsoleteLayoutParam" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPopularMovies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_16"
+            android:layout_marginBottom="@dimen/spacing_16"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="1"
+            tools:listitem="@layout/row_item_popular_services" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_16"
+            android:layout_marginTop="@dimen/spacing_32"
+            android:layout_marginBottom="@dimen/spacing_16"
+            android:text="@string/latest_from_blog"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize16sp"
+            android:textStyle="bold"
+            tools:ignore="ObsoleteLayoutParam" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPopularMovies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_16"
+            android:layout_marginBottom="@dimen/spacing_16"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="1"
+            tools:itemCount="12"
+            tools:listitem="@layout/row_item_latest_blog_services" />
+
+    </LinearLayout>
+</ScrollView>
