@@ -14,7 +14,9 @@
             android:layout_width="match_parent"
             android:layout_height="360dp"
             android:background="@color/color_gray_light"
-            android:padding="@dimen/padding_16">
+            android:paddingStart="@dimen/padding_16"
+            android:paddingTop="@dimen/padding_16"
+            android:paddingEnd="@dimen/padding_16">
 
             <TextView
                 android:id="@+id/tv_header_title"
@@ -34,8 +36,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_below="@+id/tv_header_title"
-                android:layout_margin="@dimen/spacing_8"
-                android:background="@drawable/search_layout"
+                android:layout_marginStart="@dimen/spacing_8"
+                android:layout_marginTop="@dimen/spacing_16"
+                android:layout_marginEnd="@dimen/spacing_8"
+                android:background="@drawable/curved_layout"
                 android:drawableStart="@drawable/ic_baseline_search"
                 android:drawableLeft="@drawable/ic_baseline_search"
                 android:drawablePadding="@dimen/spacing_8"
@@ -77,7 +81,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_margin="@dimen/spacing_16"
-                    android:background="@drawable/search_layout"
+                    android:background="@drawable/curved_layout"
                     android:orientation="vertical">
 
                     <TextView
@@ -149,6 +153,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing_16"
             android:layout_marginTop="@dimen/spacing_8"
+            android:layout_marginBottom="@dimen/spacing_16"
             android:orientation="horizontal"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:spanCount="2"
@@ -164,7 +169,7 @@
             android:layout_marginBottom="@dimen/spacing_16"
             android:text="@string/label_popular_these_days"
             android:textColor="@color/black"
-            android:textSize="@dimen/textSize16sp"
+            android:textSize="@dimen/textSize18sp"
             android:textStyle="bold"
             tools:ignore="ObsoleteLayoutParam" />
 
@@ -192,7 +197,6 @@
             android:textSize="@dimen/textSize16sp"
             android:textStyle="bold"
             tools:ignore="ObsoleteLayoutParam" />
-
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_blog_posts"

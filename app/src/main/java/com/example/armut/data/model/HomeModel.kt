@@ -23,7 +23,8 @@ data class Service(
     @SerializedName("pro_count")
     val proCount: Int?,
     @SerializedName("service_id")
-    val serviceId: Int?
+    val serviceId: Int?,
+    var injectedIcon: Int
 )
 
 data class Post(
