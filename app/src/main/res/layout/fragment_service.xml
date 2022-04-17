@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_180">
+
+            <ImageView
+                android:id="@+id/imgServicePhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tvServiceTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/spacing_8"
+                android:maxLines="1"
+                android:text="@string/loremIspm_text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize22sp"
+                android:textStyle="bold"
+                tools:ignore="ObsoleteLayoutParam" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_16">
+
+            <TextView
+                android:id="@+id/tvServiceProsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_2"
+                android:drawablePadding="@dimen/padding_8"
+                android:maxLines="1"
+                android:textColor="@color/teal_700"
+                android:textSize="@dimen/textSize16sp"
+                app:drawableStartCompat="@drawable/ic_person"
+                tools:ignore="ObsoleteLayoutParam"
+                tools:text="123334" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/prosNearYou"
+                android:textSize="@dimen/textSize16sp"
+                tools:ignore="ObsoleteLayoutParam" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_16">
+
+            <TextView
+                android:id="@+id/tvServiceRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_2"
+                android:drawablePadding="@dimen/padding_8"
+                android:maxLines="1"
+                android:textColor="@color/teal_700"
+                android:textSize="@dimen/textSize16sp"
+                app:drawableStartCompat="@drawable/ic_star_filled"
+                tools:ignore="ObsoleteLayoutParam"
+                tools:text="2.4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/averageRating"
+                android:textSize="@dimen/textSize16sp"
+                tools:ignore="ObsoleteLayoutParam" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvServiceLastMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8"
+            android:drawablePadding="@dimen/padding_8"
+            android:maxLines="1"
+            android:padding="@dimen/padding_16"
+            android:textSize="@dimen/textSize16sp"
+            app:drawableStartCompat="@drawable/ic_job_done"
+            tools:ignore="ObsoleteLayoutParam"
+            tools:text="Last month 124333 cleaning jobs completd" />
+
+        <TextView
+            android:id="@+id/tvServiceAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8"
+            android:drawablePadding="@dimen/padding_8"
+            android:maxLines="1"
+            android:padding="@dimen/padding_16"
+            android:text="@string/free_of_charges"
+            android:textSize="@dimen/textSize16sp"
+            app:drawableStartCompat="@drawable/ic_no_amount"
+            tools:ignore="ObsoleteLayoutParam" />
+
+        <TextView
+            android:id="@+id/tvServiceGuarantee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8"
+            android:drawablePadding="@dimen/padding_8"
+            android:maxLines="1"
+            android:padding="@dimen/padding_16"
+            android:text="@string/service_guaranteed"
+            android:textSize="@dimen/textSize16sp"
+            app:drawableStartCompat="@drawable/ic_service_guaranteed"
+            tools:ignore="ObsoleteLayoutParam" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="@dimen/spacing_16" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,4 +1,4 @@
-package com.example.armut.data.repository.movies
+package com.example.armut.data.repository.home
 
 import com.example.armut.data.DataState
 import com.example.armut.data.model.HomeModel

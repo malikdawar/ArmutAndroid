@@ -1,4 +1,4 @@
-package com.example.armut.data.repository.movies
+package com.example.armut.data.repository.home
 
 import androidx.annotation.WorkerThread
 import com.example.armut.core.extensions.noNetworkErrorMessage

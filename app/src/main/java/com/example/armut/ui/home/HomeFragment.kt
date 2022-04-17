@@ -4,14 +4,19 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.AndroidViewModel
 import androidx.recyclerview.widget.RecyclerView
 import com.example.armut.base.BaseFragment
 import com.example.armut.core.extensions.conditionallyVisible
+import com.example.armut.core.extensions.replaceFragment
 import com.example.armut.core.extensions.showToastMsg
 import com.example.armut.databinding.FragmentHomeBinding
+import com.example.armut.ui.MainViewModel
 import com.example.armut.ui.home.adapters.BlogPostsAdapter
 import com.example.armut.ui.home.adapters.ServicesAdapter
+import com.example.armut.ui.service.ServiceFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 /**
@@ -23,6 +28,8 @@ import dagger.hilt.android.AndroidEntryPoint
 class HomeFragment : BaseFragment() {
 
     private val viewModel: HomeViewModel by viewModels()
+    private val sharedViewModel: MainViewModel by activityViewModels()
+
     private lateinit var binding: FragmentHomeBinding
     private var servicesAdapter: ServicesAdapter =
         ServicesAdapter(ServicesAdapter.AdapterViewType.ALL)
@@ -79,7 +86,10 @@ class HomeFragment : BaseFragment() {
     private fun initRecyclerViews() {
         servicesAdapter.apply {
             onServicesItemSelectionListener { service ->
-                showToastMsg(service.name)
+                service.serviceId?.let {
+                    sharedViewModel.setServiceId(serviceId = it)
+                    replaceFragment(ServiceFragment())
+                }
             }
             stateRestorationPolicy =
                 RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
@@ -88,7 +98,10 @@ class HomeFragment : BaseFragment() {
 
         popularServicesAdapter.apply {
             onServicesItemSelectionListener { service ->
-                showToastMsg(service.name)
+                service.serviceId?.let {
+                    sharedViewModel.setServiceId(serviceId = it)
+                    replaceFragment(ServiceFragment())
+                }
             }
             binding.rvPopularServices.adapter = this
         }

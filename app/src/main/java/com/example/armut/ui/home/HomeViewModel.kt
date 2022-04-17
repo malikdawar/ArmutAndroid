@@ -25,8 +25,8 @@ class HomeViewModel @Inject constructor(
     private val fetchHomeUseCase: FetchHomeUseCase
 ) : ViewModel() {
 
-    private var _uiState = MutableLiveData<MovieUiState>()
-    var uiStateLiveData: LiveData<MovieUiState> = _uiState
+    private var _uiState = MutableLiveData<HomeUiState>()
+    var uiStateLiveData: LiveData<HomeUiState> = _uiState
 
     private var _allServicesLiveData = MutableLiveData<List<Service>>()
     var allServicesLiveData: MutableLiveData<List<Service>> = _allServicesLiveData
@@ -38,11 +38,11 @@ class HomeViewModel @Inject constructor(
     var blogPostsLiveData: MutableLiveData<List<Post>> = _blogPostsLiveData
 
     init {
-        fetchMovies()
+        fetchHomeDetails()
     }
 
     @SuppressLint("NullSafeMutableLiveData")
-    private fun fetchMovies() {
+    private fun fetchHomeDetails() {
         _uiState.postValue(LoadingState)
 
         viewModelScope.launch {

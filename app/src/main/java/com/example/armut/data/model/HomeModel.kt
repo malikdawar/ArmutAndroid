@@ -24,7 +24,10 @@ data class Service(
     val proCount: Int?,
     @SerializedName("service_id")
     val serviceId: Int?,
-    var injectedIcon: Int
+    @SerializedName("average_rating")
+    val averageRating: Float?,
+    @SerializedName("completed_jobs_on_last_month")
+    val completedJobsLastMonth: Int?
 )
 
 data class Post(

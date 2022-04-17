@@ -1,6 +1,6 @@
 package com.example.armut.data.usecases
 
-import com.example.armut.data.repository.movies.HomeRepository
+import com.example.armut.data.repository.home.HomeRepository
 import javax.inject.Inject
 
 /**

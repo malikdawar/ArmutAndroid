@@ -68,22 +68,6 @@ class ServicesAdapter(private val adapterViewType: AdapterViewType) :
 
     override fun getItemCount() = serviceItems.size
 
-    inner class AllServicesViewHolder(private val rowItemAllServicesBinding: RowItemAllServicesBinding) :
-        RecyclerView.ViewHolder(rowItemAllServicesBinding.root) {
-
-        fun bind(service: Service) {
-            rowItemAllServicesBinding.apply {
-                if (service.serviceId == -1) {
-                    itemImgViewServiceIcon.setImageResource(R.drawable.ic_diger)
-                    itemImgViewServiceIcon.scaleType = ImageView.ScaleType.CENTER
-                } else {
-                    itemImgViewServiceIcon.load(service.imageUrl)
-                }
-                itemTextServiceTitle.text = service.name
-            }
-        }
-    }
-
     inner class PopularServicesViewHolder(private val rowItemPopularServicesBinding: RowItemPopularServicesBinding) :
         RecyclerView.ViewHolder(rowItemPopularServicesBinding.root) {
 
@@ -91,6 +75,30 @@ class ServicesAdapter(private val adapterViewType: AdapterViewType) :
             rowItemPopularServicesBinding.apply {
                 itemImgViewServicesIcon.load(service.imageUrl)
                 itemTextServicesTitle.text = service.name
+
+                layoutContainer.setOnClickListener {
+                    onServiceItemSelected.invoke(service)
+                }
+            }
+        }
+    }
+
+    inner class AllServicesViewHolder(private val rowItemAllServicesBinding: RowItemAllServicesBinding) :
+        RecyclerView.ViewHolder(rowItemAllServicesBinding.root) {
+
+        fun bind(service: Service) {
+            rowItemAllServicesBinding.apply {
+                itemTextServiceTitle.text = service.name
+                if (service.serviceId == -1) {
+                    itemImgViewServiceIcon.setImageResource(R.drawable.ic_diger)
+                    itemImgViewServiceIcon.scaleType = ImageView.ScaleType.CENTER
+                } else {
+                    itemImgViewServiceIcon.load(service.imageUrl)
+                }
+
+                layoutContainer.setOnClickListener {
+                    onServiceItemSelected.invoke(service)
+                }
             }
         }
     }

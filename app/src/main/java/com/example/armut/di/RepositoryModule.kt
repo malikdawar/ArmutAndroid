@@ -1,8 +1,10 @@
 package com.example.armut.di
 
 import com.example.armut.data.remote.apiservice.ArmutApiInterface
-import com.example.armut.data.repository.movies.HomeRepository
-import com.example.armut.data.repository.movies.HomeRepositoryImpl
+import com.example.armut.data.repository.home.HomeRepository
+import com.example.armut.data.repository.home.HomeRepositoryImpl
+import com.example.armut.data.repository.service.ServiceRepository
+import com.example.armut.data.repository.service.ServiceRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -19,7 +21,13 @@ class RepositoryModule {
 
     @Singleton
     @Provides
-    fun provideMoviesRepository(armutApiService: ArmutApiInterface): HomeRepository {
+    fun provideHomeRepository(armutApiService: ArmutApiInterface): HomeRepository {
         return HomeRepositoryImpl(armutApiService)
+    }
+
+    @Singleton
+    @Provides
+    fun provideServiceRepository(armutApiService: ArmutApiInterface): ServiceRepository {
+        return ServiceRepositoryImpl(armutApiService)
     }
 }

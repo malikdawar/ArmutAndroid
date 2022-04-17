@@ -11,4 +11,8 @@
     <string name="newly_weds">First time newly weds</string>
     <string name="label_all_services">All Services</string>
     <string name="latest_from_blog">Latest from the blog</string>
+    <string name="prosNearYou">Pros near you</string>
+    <string name="averageRating">average rating</string>
+    <string name="service_guaranteed">Service Guaranteed</string>
+    <string name="free_of_charges">Free of charges</string>
 </resources>

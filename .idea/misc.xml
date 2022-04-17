@@ -13,6 +13,8 @@
         <entry key="app/src/main/res/drawable/ic_diger.xml" value="0.127" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2745" />
         <entry key="app/src/main/res/drawable/ic_like.xml" value="0.30462962962962964" />
+        <entry key="app/src/main/res/drawable/ic_person.xml" value="0.2745" />
+        <entry key="app/src/main/res/drawable/ic_star_filled.xml" value="0.2745" />
         <entry key="app/src/main/res/drawable/search_layout.xml" value="0.2745" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3494791666666667" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
@@ -20,6 +22,7 @@
         <entry key="app/src/main/res/layout/fragment_news_feed.xml" value="0.3494791666666667" />
         <entry key="app/src/main/res/layout/fragment_photo_details.xml" value="0.35104166666666664" />
         <entry key="app/src/main/res/layout/fragment_product_details.xml" value="0.1953125" />
+        <entry key="app/src/main/res/layout/fragment_service.xml" value="0.25" />
         <entry key="app/src/main/res/layout/layout_movies_details.xml" value="0.3494791666666667" />
         <entry key="app/src/main/res/layout/row_item_all_services.xml" value="0.31567028985507245" />
         <entry key="app/src/main/res/layout/row_item_latest_blog_services.xml" value="0.1" />
