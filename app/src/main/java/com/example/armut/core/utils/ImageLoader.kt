@@ -19,7 +19,7 @@ private val shimmer =
         .setAutoStart(true)
         .build()
 
-fun ImageView.load(url: String) {
+fun ImageView.load(url: String?) {
     val shimmerDrawable = ShimmerDrawable().apply {
         setShimmer(shimmer)
     }

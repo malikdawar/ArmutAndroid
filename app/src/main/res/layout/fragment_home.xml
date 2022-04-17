@@ -11,7 +11,6 @@
         android:orientation="vertical">
 
         <RelativeLayout
-            android:id="@+id/layoutRecommendedMoviesControl"
             android:layout_width="match_parent"
             android:layout_height="360dp"
             android:background="@color/color_gray_light"
@@ -134,6 +133,7 @@
 
 
         <TextView
+            android:id="@+id/tvLabelAllServices"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing_16"
@@ -144,7 +144,7 @@
             tools:ignore="ObsoleteLayoutParam" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvRecommendedMovies"
+            android:id="@+id/recyclerAllServices"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing_16"
@@ -156,6 +156,7 @@
             tools:listitem="@layout/row_item_all_services" />
 
         <TextView
+            android:id="@+id/tvLabelPopularServices"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing_16"
@@ -169,7 +170,7 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvPopularMovies"
+            android:id="@+id/rvPopularServices"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing_16"
@@ -180,6 +181,7 @@
             tools:listitem="@layout/row_item_popular_services" />
 
         <TextView
+            android:id="@+id/tv_blog_posts_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing_16"
@@ -193,7 +195,7 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvPopularMovies"
+            android:id="@+id/rv_blog_posts"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing_16"

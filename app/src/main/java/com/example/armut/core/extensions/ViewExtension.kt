@@ -8,7 +8,7 @@ import com.example.armut.App
  * Extension function to show toast message
  * @author Dawar Malik.
  */
-fun Any.showToastMsg(message: String) {
+fun Any.showToastMsg(message: String?) {
     Toast.makeText(App.getAppContext(), message, Toast.LENGTH_SHORT).show()
 }
 
@@ -26,4 +26,13 @@ fun View.visible() {
  */
 fun View.gone() {
     visibility = View.GONE
+}
+
+/**
+ * An Extension to make view visible conditionally
+ * @author Dawar Malik.
+ */
+
+fun View.conditionallyVisible(isVisible: Boolean = true){
+    visibility = if (isVisible) View.VISIBLE else View.GONE
 }
